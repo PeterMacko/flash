@@ -1,4 +1,4 @@
-<?php namespace Project22\Flash;
+<?php namespace PeterMacko\Flash;
 
 use Illuminate\Support\ServiceProvider;
 

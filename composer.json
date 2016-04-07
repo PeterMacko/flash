@@ -1,5 +1,5 @@
 {
-    "name": "project22/flash",
+    "name": "PeterMacko/flash",
     "description": "Easy flash notifications",
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
             "Laracasts\\Flash": "src/"
         },
         "files": [
-            "src/Project22/Flash/functions.php"
+            "src/PeterMacko/Flash/functions.php"
         ]
     },
     "minimum-stability": "stable"
