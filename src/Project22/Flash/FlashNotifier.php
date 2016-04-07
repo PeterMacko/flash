@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Flash;
+<?php namespace Project22\Flash;
 
 class FlashNotifier
 {
@@ -99,8 +99,10 @@ class FlashNotifier
      */
     public function message($message, $level = 'info')
     {
-        $this->session->flash('flash_notification.message', $message);
-        $this->session->flash('flash_notification.level', $level);
+        $messages = $this->session->flash('flash_notification.messages');
+        $messages[] = ['message' => $message, 'level' => $level];
+
+        $this->session->flash('flash_notification.messages', $messages);
 
         return $this;
     }

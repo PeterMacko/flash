@@ -17,3 +17,14 @@
     @endif
 @endif
 
+@if (session()->has('flash_notification.messages'))
+    @foreach($mesage as session()->has('flash_notification.messages'))
+        <div class="alert alert-{{ $mesage['level'] }}">
+            <button type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-hidden="true">&times;</button>
+
+            {!! $mesage['message'] !!}
+        </div>
+@endif

@@ -1,11 +1,11 @@
 {
-    "name": "laracasts/flash",
+    "name": "project22/flash",
     "description": "Easy flash notifications",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jeffrey Way",
-            "email": "jeffrey@laracasts.com"
+            "name": "Peter Macko",
+            "email": "pmacko@project22.sk"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
             "Laracasts\\Flash": "src/"
         },
         "files": [
-            "src/Laracasts/Flash/functions.php"
+            "src/Project22/Flash/functions.php"
         ]
     },
     "minimum-stability": "stable"

@@ -1,4 +1,4 @@
-<?php namespace Laracasts\Flash;
+<?php namespace Project22\Flash;
 
 use Illuminate\Support\ServiceProvider;
 
