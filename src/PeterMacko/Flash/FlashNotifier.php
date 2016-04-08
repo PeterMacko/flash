@@ -82,7 +82,7 @@ class FlashNotifier
      */
     public function overlay($message, $title = 'Notice', $level = 'info')
     {
-        $this->message($message, $level);
+        $this->message($message, $level, true, $title);
 
         $this->session->flash('flash_notification.overlay', true);
         $this->session->flash('flash_notification.title', $title);
@@ -95,12 +95,22 @@ class FlashNotifier
      *
      * @param  string $message
      * @param  string $level
+     * @param  boolean $overlay
+     * @param  string $title
      * @return $this
      */
-    public function message($message, $level = 'info')
+    public function message($message, $level = 'info', $overlay = false, $title = null)
     {
-        $messages = $this->session->flash('flash_notification.messages');
-        $messages[] = ['message' => $message, 'level' => $level];
+        if($this->session->has('flash_notification.messages'))
+        {
+            $messages = $this->session->get('flash_notification.messages');
+        }
+        else
+        {
+            $messages = array();
+        }
+
+        $messages[] = ['message' => $message, 'level' => $level, 'overlay' => $overlay, 'title' => $title];
 
         $this->session->flash('flash_notification.messages', $messages);
 

@@ -28,4 +28,24 @@ class LaravelSessionStore implements SessionStore {
         $this->session->flash($name, $data);
     }
 
+    /**
+     * has a message to the session?
+     *
+     * @param $name
+     */
+    public function has($name)
+    {
+        return $this->session->has($name);
+    }
+
+    /**
+     * get a message from the session.
+     *
+     * @param $name
+     */
+    public function get($name)
+    {
+        return $this->session->get($name);
+    }
+
 }

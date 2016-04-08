@@ -10,4 +10,17 @@ interface SessionStore {
      */
     public function flash($name, $data);
 
+    /**
+     * has a message to the session?
+     *
+     * @param $name
+     */
+    public function has($name);
+
+    /**
+     * get a message from the session.
+     *
+     * @param $name
+     */
+    public function get($name);
 } 
