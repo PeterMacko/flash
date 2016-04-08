@@ -4,13 +4,13 @@
 
 First, pull in the package through Composer.
 
-Run `composer require laracasts/flash`
+Run `composer require PeterMacko/flash`
 
 And then, if using Laravel 5, include the service provider within `config/app.php`.
 
 ```php
 'providers' => [
-    'Laracasts\Flash\FlashServiceProvider'
+    'PeterMacko\Flash\FlashServiceProvider'
 ];
 ```
 
@@ -18,7 +18,7 @@ And, for convenience, add a facade alias to this same file at the bottom:
 
 ```php
 'aliases' => [
-    'Flash' => 'Laracasts\Flash\Flash'
+    'Flash' => 'PeterMacko\Flash\Flash'
 ];
 ```
 
@@ -125,7 +125,7 @@ If you need to modify the flash message partials, you can run:
 php artisan vendor:publish
 ```
 
-The two package views will now be located in the `app/views/packages/laracasts/flash/` directory.
+The two package views will now be located in the `app/views/packages/PeterMacko/flash/` directory.
 
 ```php
 Flash::message('Welcome aboard!');
